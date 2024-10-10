@@ -1,0 +1,25 @@
+<div class="scroll">
+  <div class="container">
+    <h1>Gerenciamento de Alunos</h1>
+
+    <div class="aluno-list">
+      <div class="aluno-card" *ngFor="let aluno of alunos">
+        <div class="aluno-header">
+          <h2>{{aluno.nome}}</h2> 
+          <p>Matricula: {{aluno.matricula}}</p>
+        </div>
+
+        <div class="aluno-info">
+          <p>Email:  {{aluno.email}}</p>
+          <p>CPF:  {{aluno.cpf}}</p>
+          <p>Curso:  {{aluno.curso}}</p>
+        </div>
+      
+        <div class="aluno-actions">
+          <ion-button fill="outline" shape="round" [routerLink]="['/alunos/ver/', aluno.id]" color="primary">Ver</ion-button>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+</div>

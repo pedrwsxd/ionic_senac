@@ -1,0 +1,34 @@
+<div class="scroll">
+  <div class="container">
+    <h1>
+      Detalhes do Aluno
+    </h1>
+    <div class="aluno-card">
+      <div class="aluno-header">
+        <h2>{{aluno.nome}}</h2>
+        <p>{{aluno.matricula}}</p>
+      </div>
+
+      <div class="aluno-info">
+        <h3>Informações pessoais</h3>
+        <p>Email: {{aluno.email}}</p>
+        <p>CPF: {{aluno.cpf}}</p>
+        <p>Telefone: {{aluno.telefone}}</p>
+      </div>
+
+      <div class="aluno-address">
+        <h3>Endereço</h3>
+
+        <p>Rua: {{aluno.endereco?.logradouro}}</p>
+        <p>Bairro: {{aluno.endereco?.bairro}}</p>
+        <p>Cidade: {{aluno.endereco?.cidade}}</p>
+        <p>uf: {{aluno.endereco?.uf}}</p>
+        <p>Cep: {{aluno.endereco?.cep}}</p>
+      </div>
+    </div>
+
+    <div class="aluno-actions">
+      <ion-button fill="outline" shape="round" [routerLink]="['/alunos/listar']" color="primary">Voltar</ion-button>
+    </div>
+  </div>
+</div>
