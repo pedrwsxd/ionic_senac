@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AlunoListComponent } from './aluno-list/aluno-list.component';
 import { AlunoDetalhesComponent } from './aluno-detalhes/aluno-detalhes.component';
+import { ProfessorListComponent } from './professor-list/professor-list.component';
+import { ProfessorDetalhesComponent } from './professor-detalhes/professor-detalhes.component';
 
 const routes: Routes = [
   {
@@ -15,6 +17,14 @@ const routes: Routes = [
   {
     path: 'alunos/ver/:id',
     component: AlunoDetalhesComponent
+  },
+  {
+    path: 'professores/listar',
+    component: ProfessorListComponent
+  },
+  {
+    path: 'professores/ver/:id',
+    component: ProfessorDetalhesComponent
   }
 ];
 @NgModule({
