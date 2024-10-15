@@ -5,19 +5,37 @@
     <div class="aluno-list">
       <div class="aluno-card" *ngFor="let aluno of alunos">
         <div class="aluno-header">
-          <h2>{{aluno.nome}}</h2> 
-          <p>Matricula: {{aluno.matricula}}</p>
+          <h2><i class="fa-solid fa-user"></i> {{aluno.nome}}</h2> 
+          <p><i class="fa fa-id-badge"></i> Matricula: {{aluno.matricula}}</p>
         </div>
 
         <div class="aluno-info">
-          <p>Email:  {{aluno.email}}</p>
-          <p>CPF:  {{aluno.cpf}}</p>
-          <p>Curso:  {{aluno.curso}}</p>
+          <p> <i class="fa fa-envelope"></i> Email:  {{aluno.email}}</p>
+          <p> <i class="fa fa-file-alt"></i> CPF:  {{aluno.cpf}}</p>
+          <p> <i class="fa fa-book"></i> Curso:  {{aluno.curso}}</p>
         </div>
       
         <div class="aluno-actions">
-          <ion-button fill="outline" shape="round" [routerLink]="['/alunos/ver/', aluno.id]" color="primary">Ver detalhes</ion-button>
+          <ion-button fill="outline" shape="round" [routerLink]="['/alunos/ver/', aluno.id]" color="primary">
+            <i class="fa fa-eye"></i>
+            Ver detalhes
+          </ion-button>
+          
+          <ion-button fill="outline" shape="round" [routerLink]="['/alunos/edit/', aluno.id]" color="tertiary">
+            <i class="fa fa-edit"></i>
+            Editar
+          </ion-button>
+          
+          <ion-button fill="outline" shape="round" (click)="excluirAluno(aluno.id)" color="danger">
+            <i class="fa fa-trash-alt"></i>
+            Excluir
+          </ion-button>
+
+
+          
         </div>
+
+        
 
         
       

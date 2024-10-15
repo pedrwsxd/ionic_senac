@@ -22,5 +22,11 @@ export class AlunoListComponent  implements OnInit {
     })
   }
 
+  excluirAluno(id: number){
+    this.alunoService.excluir(id).subscribe(() => {
+      this.listarAluno();
+    })
+  }
+
 
 }

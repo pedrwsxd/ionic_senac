@@ -4,6 +4,7 @@ import { AlunoListComponent } from './aluno-list/aluno-list.component';
 import { AlunoDetalhesComponent } from './aluno-detalhes/aluno-detalhes.component';
 import { ProfessorListComponent } from './professor-list/professor-list.component';
 import { ProfessorDetalhesComponent } from './professor-detalhes/professor-detalhes.component';
+import { AlunoEditComponent } from './aluno-edit/aluno-edit.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'alunos/ver/:id',
     component: AlunoDetalhesComponent
+  },
+  {
+    path: 'alunos/edit/:id',
+    component: AlunoEditComponent
   },
   {
     path: 'professores/listar',

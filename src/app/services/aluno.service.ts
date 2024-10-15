@@ -17,4 +17,12 @@ export class AlunoService {
   listarPorId(id: any): Observable<any>{
     return this.http.get<any[]>(`${this.apiUrl}/listar/${id}`);
   }
+
+  atualizar(aluno: any): Observable<any>{
+    return this.http.put(`${this.apiUrl}/atualizar`, aluno);
+  }
+
+  excluir(id: number): Observable<any>{
+    return this.http.delete(`${this.apiUrl}/deletar/${id}`)
+  }
 }
